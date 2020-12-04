@@ -19,3 +19,5 @@ There is a navigation bar that will direct to respective pages which includes Ho
 10. Run the command docker run -d -p 1200:1200 project-node
 11. Copy the IP address from docker toolbox and paste in browser alongwith assigned port number.
 
+
+The screencasting vidoe of the application : https://screencast-o-matic.com/watch/cYle0INtY8
