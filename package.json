@@ -1,0 +1,23 @@
+{
+  "name": "rest-api-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Shraddha Thanekar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.7.13",
+    "random-number": "0.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}

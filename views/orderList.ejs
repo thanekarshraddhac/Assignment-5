@@ -1,0 +1,49 @@
+<html> 
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+        <div class="conatainer">
+            <nav class="blue">
+                <div class="nav-wrapper container">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/orderlists">Order List</a></li>
+                        <li><a href="#">Products</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <h4>List Of Orders</h4>
+                <table class="responsive-table highlight centered">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Order Status</th>
+                                <th>Tracking ID</th>
+                                <th>Order Placed On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (var i of orderList1) { %>
+                                <tr>
+                                    <td><a href="/orderlists/<%= i.id %>"><%= i.id %></a></td>
+                                    <td><%= i.status %></td>
+                                    <td><%= i.tracking_number %></td>
+                                    <td><%= i.created_at %></td>
+                                </tr>
+                            <% } %>
+                            <% for (var i of orderList2) { %>
+                                <tr>
+                                    <td><a href="/orderlists/<%= i.id %>"><%= i.id %></a></td>
+                                    <td><%= i.status %></td>
+                                    <td><%= i.tracking_number %></td>
+                                    <td><%= i.created_at %></td>
+                                </tr>
+                            <% } %>    
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<html> 
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+        <div class="conatainer">
+            <nav class="blue">
+                <div class="nav-wrapper container">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/orderlists">Order List</a></li>
+                        <li><a href="#">Products</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h4>Order ID: <%= orderInfo.id %></h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Customer Name</td>
+                            <td><%= orderInfo.name %></td>
+                        </tr>
+                        <tr>
+                            <td>Order Status</td>
+                            <td><%= orderInfo.status %></td>
+                        </tr>
+                        <tr>
+                            <td>Order Placed on</td>
+                            <td><%= orderInfo.created_at %></td>
+                        </tr>
+                        <tr>
+                            <td>Tracking ID</td>
+                            <td><%= orderInfo.tracking_number %></td>
+                        </tr>
+                        <tr>
+                            <td>Shipping Address</td>
+                            <td>
+                                <%= shipTo.address %>,
+                                <%= shipTo.city %><br />
+                                <%= shipTo.state %>
+                                <%= shipTo.zip %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Billing Address</td>
+                            <td>
+                                <%= billTo.address %>,
+                                <%= billTo.city %><br />
+                                <%= billTo.state %>
+                                <%= billTo.zip %>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>   
+            <div class="row">
+                <h4>Payment Info</h4>
+                <table>
+                    <tr>
+                        <td>Credit Card Bin</td>
+                        <td><%= paymentMethod.credit_card_bin %></td>
+                    </tr>
+                    <tr>
+                        <td>Credit Card Number</td>
+                        <td><%= paymentMethod.credit_card_number %></td>
+                    </tr>
+                    <tr>
+                        <td>Credit Card Type</td>
+                        <td><%= paymentMethod.credit_card_company %></td>
+                    </tr>                   
+                </table>
+            </div>       
+        </div>
+    </body>
+</html>

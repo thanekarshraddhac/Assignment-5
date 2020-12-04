@@ -1,0 +1,39 @@
+<html> 
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+    <body>
+        <div class="conatainer">
+            <nav class="blue">
+                <div class="nav-wrapper container">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/orderlists">Order List</a></li>
+                        <li><a href="#">Product</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <h4>Customers Lists</h4>
+                <table class="responsive-table highlight centered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Product ID</th>
+                                <th>Item Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (var i of customerData) { %>
+                                <tr>
+                                    <td><a href="/home/<%= i.name %>"><%= i.name %></a></td>
+                                    <td><%= i.skuid %></td>
+                                    <td><%= i.price %></td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

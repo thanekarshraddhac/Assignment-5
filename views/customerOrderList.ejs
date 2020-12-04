@@ -1,0 +1,41 @@
+<html>
+        <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        </head>
+        <body>
+            <div class="conatainer">
+                <nav class="blue">
+                    <div class="nav-wrapper container">
+                        <ul id="nav-mobile" class="left hide-on-med-and-down">
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/orderlists">Order List</a></li>
+                            <li><a href="#">Products</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container">
+                    <h4>Order placed by: <%= orderList[0].name %></h4>
+                    <table class="responsive-table highlight centered">
+                        <thead>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>Order ID</th>
+                                <th>Order Status</th>
+                                <th>Payment Method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (var i of orderList) { %>
+                            <tr>
+                                <td><%= i.name %></td>
+                                <td><a href="/home/<%= i.name %>/orders/<%= i.id %>"><%= i.id %></a></td>
+                                <td><%= i.status %></td>
+                                <td><%= i.credit_card_company %></td>
+                            </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+
+    <body>
+        <div class="conatainer">
+            <nav class="yellow">
+                <div class="nav-wrapper container">
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/orderlists">Order List</a></li>
+                        <li><a href="#">Products</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container">
+                <h4>Customer Details</h4>
+                <table class="responsive-table highlight">
+                    <tr>
+                        <td>Customer Name</td>
+                        <td><%= customer.name %></td> 
+                    </tr>
+                    <tr>
+                        <td>Customer ID</td>
+                        <td><%= customer.customerId %></td>
+                    </tr>
+                    <tr>
+                        <td>Product ID</td>
+                        <td><%= customer.skuid %></td>
+                    </tr>
+                    <tr>
+                        <td>List Price</td>
+                        <td><%= customer.price %></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/home/<%= customer.name %>/orders">Order Details</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
